@@ -5,9 +5,9 @@
 }
 
 body {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: 'Barlow', system-ui, -apple-system, sans-serif;
   background: #f3f4f6;
-  color: #111827;
+  color: #4f5051;
 }
 
 .app {
@@ -22,10 +22,10 @@ body {
   width: 100%;
   max-width: 360px;
   background: #ffffff;
-  border-radius: 16px;
+  border-radius: 8px;
   box-shadow:
-    0 10px 15px -3px rgba(15, 23, 42, 0.15),
-    0 4px 6px -4px rgba(15, 23, 42, 0.1);
+    0 2px 8px rgba(79, 80, 81, 0.08),
+    0 1px 2px rgba(79, 80, 81, 0.04);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -38,52 +38,62 @@ body {
 }
 
 .card-body {
-  padding: 20px 20px 16px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
 }
 
 .card-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #111827;
+  font-family: 'Barlow', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #4f5051;
 }
 
 .card-description {
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: #4b5563;
+  font-family: 'Barlow', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #4f5051;
 }
 
 .like-button {
   align-self: flex-start;
-  margin-top: 4px;
-  padding: 8px 14px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: #ef4444;
-  background: #fef2f2;
-  border: 1px solid #fecaca;
-  border-radius: 999px;
+  padding: 8px 16px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #4f5051;
+  background: #ffffff;
+  border: 1px solid #a7a7a8;
+  border-radius: 4px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   transition:
     background-color 0.15s ease,
     color 0.15s ease,
-    box-shadow 0.15s ease,
-    transform 0.1s ease;
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
 }
 
 .like-button:hover {
-  background: #fee2e2;
-  box-shadow: 0 4px 10px rgba(248, 113, 113, 0.25);
-  transform: translateY(-1px);
+  background: #ffffff;
+  border-color: #38d430;
+  color: #38d430;
+  box-shadow: 0 2px 4px rgba(56, 212, 48, 0.1);
 }
 
 .like-button:active {
-  transform: translateY(0);
+  background: #f3f4f6;
   box-shadow: none;
 }
