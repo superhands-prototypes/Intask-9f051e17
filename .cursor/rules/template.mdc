@@ -1,0 +1,28 @@
+---
+description: "Starter template cleanup - remove placeholder content if present"
+alwaysApply: true
+---
+
+**IMPORTANT: This rule only applies if the default template content is still present.**
+
+Check if App.tsx contains the placeholder text "You're all set" and "Start chatting with agents to build your prototype."
+
+**IF the placeholder content exists:**
+1. Delete all elements in App.tsx and replace with:
+```tsx
+export default function App() {
+  return (
+    <div className="app">
+
+    </div>
+  )
+}
+```
+2. Delete the template CSS in src/index.css (styles for .onboarding-callouts, .callout, .callout-arrow, etc.)
+3. Delete this rule file: .cursor/rules/template.mdc
+4. Then address the user's request
+
+**IF the placeholder content does NOT exist:**
+- Skip cleanup - the template has already been customized
+- Delete this rule file: .cursor/rules/template.mdc (it's no longer needed)
+- Proceed directly with the user's request
