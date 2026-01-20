@@ -1,3 +1,5 @@
+import AthleteCard from './AthleteCard'
+
 export default function App() {
   return (
     <div className="app">
@@ -16,6 +18,11 @@ export default function App() {
           </button>
         </div>
       </div>
+
+      <AthleteCard 
+        name="Chris Reid"
+        position="Centre Back"
+      />
     </div>
   )
 }
