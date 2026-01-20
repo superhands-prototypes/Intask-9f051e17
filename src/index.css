@@ -15,9 +15,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 24px;
   padding: 16px;
-  flex-wrap: wrap;
+}
+
+.cards-stack {
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .card {
@@ -149,4 +155,135 @@ body {
   text-transform: uppercase;
   color: #a7a7a8;
   margin: 0;
+}
+
+.chart-card {
+  width: 100%;
+  max-width: 360px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow:
+    0 2px 8px rgba(79, 80, 81, 0.08),
+    0 1px 2px rgba(79, 80, 81, 0.04);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.chart-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chart-container svg {
+  display: block;
+}
+
+.axis-label {
+  font-family: 'Barlow', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  fill: #a7a7a8;
+  line-height: 1.6;
+}
+
+.x-axis .axis-label {
+  font-weight: 700;
+}
+
+.axis-line {
+  stroke: #d9d9d9;
+  stroke-width: 1;
+}
+
+.chart-area {
+  opacity: 0.3;
+}
+
+.chart-area.primary {
+  fill: rgba(247, 90, 153, 0.2);
+}
+
+.chart-area.comparison {
+  fill: rgba(253, 221, 234, 0.3);
+}
+
+.chart-line {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.chart-line.primary {
+  stroke: #f75a99;
+  stroke-width: 2.5;
+}
+
+.chart-line.comparison {
+  stroke: #fdddea;
+  stroke-width: 2;
+}
+
+.data-point {
+  transition: r 0.15s ease, stroke-width 0.15s ease;
+}
+
+.data-point.hovered {
+  r: 5;
+  stroke-width: 2.5;
+}
+
+.hover-area {
+  cursor: pointer;
+}
+
+.hover-line {
+  stroke: #d9d9d9;
+  stroke-width: 1;
+  pointer-events: none;
+}
+
+.chart-tooltip {
+  position: absolute;
+  pointer-events: none;
+  z-index: 10;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tooltip-value {
+  font-family: 'Barlow', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.6;
+  padding: 2px 4px 4px;
+  border-radius: 2px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.tooltip-value.primary {
+  background: #f75a99;
+  color: #ffffff;
+}
+
+.tooltip-value.comparison {
+  background: #fdddea;
+  color: #f75a99;
+}
+
+.chart-label {
+  font-family: 'Barlow', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #a7a7a8;
+  padding-top: 8px;
+  text-align: left;
 }
